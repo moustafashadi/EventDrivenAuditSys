@@ -1,0 +1,6 @@
+@EventDrivenAuditSys.API_HostAddress = http://localhost:5088
+
+GET {{EventDrivenAuditSys.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
