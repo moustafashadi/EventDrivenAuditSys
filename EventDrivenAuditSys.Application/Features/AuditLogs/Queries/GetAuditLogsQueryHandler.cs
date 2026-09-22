@@ -1,5 +1,5 @@
 using EventDrivenAuditSys.Contracts.DTOs.Getter.Audit;
-using EventDrivenAuditSys.Contracts.Features.AuditLogs;
+using EventDrivenAuditSys.Contracts.Features.AuditLogs.Queries;
 using EventDrivenAuditSys.Contracts.Interfaces.Queries;
 using EventDrivenAuditSys.Core.IServices.Repositories.Audit;
 
