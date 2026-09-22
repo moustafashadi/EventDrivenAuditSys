@@ -42,14 +42,18 @@ public sealed class ExceptionHandlingMiddleware(
         }
 
         context.Response.StatusCode = statusCode;
-        context.Response.ContentType = "application/problem+json";
 
-        await context.Response.WriteAsJsonAsync(new ProblemDetails
-        {
-            Status = statusCode,
-            Title = title,
-            Detail = statusCode >= 500 ? "An unexpected error occurred." : exception.Message,
-            Instance = context.Request.Path
-        });
+        // WriteAsJsonAsync overwrites any ContentType set beforehand, so the
+        // RFC 7807 media type has to be passed in explicitly via this overload.
+        await context.Response.WriteAsJsonAsync(
+            new ProblemDetails
+            {
+                Status = statusCode,
+                Title = title,
+                Detail = statusCode >= 500 ? "An unexpected error occurred." : exception.Message,
+                Instance = context.Request.Path
+            },
+            options: null,
+            contentType: "application/problem+json");
     }
 }
