@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace EventDrivenAuditSys.Contracts.Interfaces.Cqrs;
+namespace EventDrivenAuditSys.Contracts.Interfaces.Commands;
 
 public interface ICommand : IRequest { }
 

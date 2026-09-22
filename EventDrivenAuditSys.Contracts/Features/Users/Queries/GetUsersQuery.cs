@@ -1,5 +1,5 @@
 using EventDrivenAuditSys.Contracts.DTOs.Getter.Users;
-using EventDrivenAuditSys.Contracts.Interfaces.Cqrs;
+using EventDrivenAuditSys.Contracts.Interfaces.Queries;
 
 namespace EventDrivenAuditSys.Contracts.Features.Users.Queries;
 

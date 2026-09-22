@@ -1,4 +1,4 @@
-using EventDrivenAuditSys.Contracts.Interfaces.Cqrs;
+using EventDrivenAuditSys.Contracts.Interfaces.Commands;
 
 namespace EventDrivenAuditSys.Contracts.Features.Enrollments.Commands;
 
