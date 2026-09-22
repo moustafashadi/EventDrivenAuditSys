@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EventDrivenAuditSys.Core.Entities;
 
-namespace EventDrivenAuditSys.Core.Entities.Users
+namespace EventDrivenAuditSys.Core.Entities.Users;
+
+public sealed class User : BaseEntity
 {
-    internal class User
+    public string FullName { get; private set; } = string.Empty;
+
+    public string Email { get; private set; } = string.Empty;
+
+    private User()
     {
+    }
+
+    public User(Guid id, string fullName, string email)
+    {
+        Id = id;
+        FullName = fullName;
+        Email = email;
     }
 }

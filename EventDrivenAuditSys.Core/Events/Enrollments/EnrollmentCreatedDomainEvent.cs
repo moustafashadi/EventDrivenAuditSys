@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace EventDrivenAuditSys.Core.Events.Enrollments;
 
-namespace EventDrivenAuditSys.Core.Events.Enrollments
-{
-    internal class EnrollmentCreatedDomainEvent
-    {
-    }
-}
+public sealed record EnrollmentCreatedDomainEvent(
+    Guid EnrollmentId,
+    Guid UserId,
+    Guid CourseId,
+    string CourseTitle,
+    DateTime OccurredAtUtc) : IDomainEvent;
